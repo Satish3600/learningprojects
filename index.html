@@ -10,11 +10,12 @@
 </head>
 
 <body>
-<div class="container p-3">
-  <nav class="navbar is-primary">
+
+<div class="container">
+  <nav class="navbar is-info">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img src="images/logo.png" width="136" height="38">
+        <img src="images/logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
       </a>
       <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
         <span class="icon" style="color: #333;">
@@ -26,45 +27,66 @@
           <i class="fab fa-twitter"></i>
         </span>
       </a>
-      <div class="navbar-burger burger" data-target="navMenuExample2">
+      <div class="navbar-burger burger" data-target="navMenuExample4">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
-    <div id="navMenuExample2" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item " href="#">
-          <!-- fdjhbj? -->
-        </a>
-
-      </div>
+    <div id="navMenuExample4" class="navbar-menu">
+      
       <div class="navbar-end">
-
         <div class="navbar-item">
           <div class="field is-grouped">
             <p class="control">
               <a id="twitter" class="button">
-                <span>Daily Exercise</span>
+                <span>Tweet</span>
               </a>
               <a id="twitter" class="button">
-                <span>Front End Developer</span>
+                <span>Tweet</span>
               </a>
               <a id="twitter" class="button">
-                <span>JavaScript</span>
+                <span>Tweet</span>
               </a>
               <a id="twitter" class="button">
-                <span>Html</span>
+                <span>Tweet</span>
               </a>
+            </p>
+           
           </div>
         </div>
       </div>
     </div>
   </nav>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
 
-  <!-- table starts -->
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+</script>
+ <!-- table starts -->
+<div class="container p-3">  
 <hr>
-  <table class="table is-striped is-fullwidth">
+<div class="table-container">
+  <table class=" table is-striped is-fullwidth ">
       <tr>
         <th>Number</th>
         <th>Task</th>
@@ -114,13 +136,8 @@
         <td>Javascript</td>
         <td>Table Genrator</td>
       </tr>
-    
-    
-    
-    
-
-
   </table>
+</div>
 </div>
 </body>
 
