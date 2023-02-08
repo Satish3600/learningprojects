@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <div class="container p-5">
+        Enter First Value: <input id="first" type="text" class="input is-large" placeholder="Enter The Value"><br><br>
+        Enter Second Value: <input id="second" type="text" class="input is-large" placeholder="Enter The Value"><br><br>
+
+
+        <div class="column has-text-centered">
+            <button onclick="mumbai()" class="button is-info">Click</button>
+        </div>
+
+        Total Answer: <input id="third" type="text" class="input is-large" placeholder="Enter The Value"><br><br>
+        Detail Answer: <input id="fourth" type="text" class="input is-large" placeholder="Enter The Value">
+
+<!-- <script>
+    function mumbai(){
+        var a = Number(document.getElementById("first").value);
+        var b = Number(document.getElementById("second").value);
+        var total = 0;
+        var botal="";
+        for(i=a; i<=b; i++){
+            total =total + i;
+            if(i!=b){
+            botal = botal + i + "+";
+        }else{
+            botal = botal + i;
+        }
+        }
+        
+        document.getElementById("third").value = total;
+        document.getElementById("fourth").value = botal;
+    }
+</script> -->
+
+
+<script>
+    function mumbai(){
+        var a = Number(document.getElementById("first").value);
+        var b = Number(document.getElementById("second").value);
+        var total = 0;
+        var botal = "";
+        for(i=a; i<=b; i++){
+            total = total + i;
+        if(i!=b){
+            botal = botal + i + "+";    
+        }
+        else{
+            botal = botal + i ;
+        }
+        }
+        document.getElementById("third").value=total;
+        document.getElementById("fourth").value=botal;
+}
+</script>
+
+
+    </div>
+</body>
+</html>

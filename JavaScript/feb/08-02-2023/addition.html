@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <div class="container p-3" >
+Enter First Value: <input id="first" type="text" class="input is-large" placeholder="Enter The Value"><br><br>
+Enter Second Value: <input id="second" type="text" class="input is-large" placeholder="Enter The Value"><br><br>
+
+
+<div class="column has-text-centered">
+<button onclick="fap()" class="button is-info">Total</button><br>
+</div>
+
+
+Addition:  <input id="addition" type="text" class="input is-large" placeholder="Check Addition Results"><br><br>
+Subtraction
+:  <input id="subtraction" type="text" class="input is-large" placeholder="Check Substraction Results"><br><br>
+Multiplication:  <input id="multiplication" type="text" class="input is-large" placeholder="Check Multiplication Results"><br><br>
+Division:  <input id="division" type="text" class="input is-large" placeholder="Check Division Results"><br><br>
+
+            <script>
+                function fap(){
+                        var n = Number(document.getElementById("first").value);
+                        console.log("value of n:>" +n);
+                        var m = Number(document.getElementById("second").value);
+                        console.log("value of n:>" +n + "Value of m:>"+ m);
+                        var add = n + m;
+                        console.log("value of n:>" +n + "Value of m:>"+ m + "add:>"+add);
+                        var sub = n-m;
+                        console.log("value of n:>" +n + "Value of m:>"+ m + "add:>"+sub);
+                        var multi = n*m;
+                        var division = n/m;
+                        document.getElementById("addition").value=add;
+                        document.getElementById("subtraction").value=sub;
+                        document.getElementById("multiplication").value=multi;
+                        document.getElementById("division").value=division;
+
+                }
+            </script>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>

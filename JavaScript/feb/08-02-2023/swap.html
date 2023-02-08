@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <div class="conainer p-5">
+      Value Of A:  <input id="first" type="text" class="input is-large" placeholder="Enter The Value"><br><br>
+      Value Of B: <input id="second" type="text" class="input is-large" placeholder="Enter The Value">
+        <br><br>
+
+        <button onclick="dap()" class="button is-info">Swap</button>
+
+        <script>
+            function dap(){
+           var temp = Number(document.getElementById("first").value);
+
+           document.getElementById("first").value = Number(document.getElementById("second").value);
+document.getElementById("second").value= temp
+            }
+        </script>
+
+
+
+    </div>
+</body>
+</html>
