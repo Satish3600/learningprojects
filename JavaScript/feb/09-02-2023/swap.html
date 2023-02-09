@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container p-5">
+        Enter The Value: <input id="inputbox1" type="text" class="input is-large" placeholder="Enter the value">
+        Enter The Value: <input id="inputbox2" type="text" class="input is-large" placeholder="Enter the value">
+        <div class="column has-text-centered">
+            <button onclick="display()" class="button is-info">Swap</button>
+        </div>
+    </div>
+    <script>
+   function display(){
+    var inputbox1 = Number(document.getElementById("inputbox1").value);
+
+
+    document.getElementById("inputbox1").value = Number(document.getElementById("inputbox2").value)
+    document.getElementById("inputbox2").value = inputbox1;
+   }
+    </script>
+</body>
+
+</html>
+<!-- function dap(){
+    var temp = Number(document.getElementById("first").value);
+
+    document.getElementById("first").value = Number(document.getElementById("second").value);
+document.getElementById("second").value= temp
+     } -->
