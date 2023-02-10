@@ -11,7 +11,7 @@
 
 <body>
 
-  <!-- <div class="container"> -->
+   <div class="">
   <nav class="navbar is-info">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
@@ -58,25 +58,29 @@
     </div>
   </nav>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
 
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-      // Add a click event on each of them
-      $navbarBurgers.forEach(el => {
-        el.addEventListener('click', () => {
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-        });
-      });
-    });
-  </script>
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+ </script>
   <!-- table starts -->
   <div class="container p-3">
       <!-- 10-02-2023 progarm below -->
@@ -93,115 +97,57 @@
       <tr>
         <td>#1</td>
         <td> Add two number & get results two number sum</td>
-        <td>36 min</td>
-        <td>08/02/2023</td>
+        <td>10 min</td>
+        <td>10/02/2023</td>
         <td>Javascript</td>
         <td><a href="JavaScript/feb/08-02-2023/addition.html">Add Two Number Program</a></td>
       </tr>
       <tr>
         <td>#2</td>
-        <td></a></td>
-        <td></td>
-        <td></td>
+        <td>Add two number & get sum</a></td>
+        <td> 10 min</td>
+        <td>10/02/2023</td>
         <td>Javascript</td>
-        <td> </td>
+        <td><a href="JavaScript/feb/10-02-2023/between.html"> Add two number & get sum</a> </td>
       </tr>
       <tr>
         <td>#3</td>
-        <td> </a></td>
-        <td></td>
-        <td></td>
+        <td>Dynamic Tbale which can draw automaticly row&column</td>
+        <td>2 hr</td>
+        <td>10/02/2023</td>
         <td>Javascript</td>
-        <td></td>
+        <td> <a href="JavaScript/feb/10-02-2023/rowndcol.html"> Dynamic Tbale whic can draw automaticly row&column </a> </td>
       </tr>
       <tr>
         <td>#4</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td> automaticalyy draw table</td>
+        <td>1 hr</td>
+        <td>10/02/2023</td>
         <td>Javascript</td>
-        <td></td>
+        <td> <a href="JavaScript/feb/10-02-2023/table5.html"> automaticalyy draw table </a> </td>
       </tr>
       <tr>
         <td>#5</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>automatically draw table whatever you can enter the number</td>
+        <td>3 hr</td>
+        <td>10/02/2023</td>
         <td>Javascript</td>
-        <td></td>
+        <td> <a href="JavaScript/feb/10-02-2023/table10.html"> automatically draw table whatever you can enter the number  </a> </td>
       </tr>
       <tr class="is-selected">
         <td></td>
-        <td>I have spend  hrs in javascript, hrs in html & bulma hjkbjh</td>
-        <td>Total= hrs</td>
+        <td>I have spend 6 hrs in javascript </td>
+        <td>Total=6 hrs</td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
     </table>
   <!-- 09-02-2023 progarm below -->
-    <table class="table is-fullwidth">
-      <h1 class="title is-size-5">Date :- 09/02/2023</h1>
-      <tr>
-        <th>Number</th>
-        <th>Task</th>
-        <th>Time</th>
-        <th>Date</th>
-        <th>Language</th>
-        <th>Program Link</th>
-      </tr>
-      <tr>
-        <td>#1</td>
-        <td> Add two number & get results two number sum</td>
-        <td>36 min</td>
-        <td>08/02/2023</td>
-        <td>Javascript</td>
-        <td><a href="JavaScript/feb/08-02-2023/addition.html">Add Two Number Program</a></td>
-      </tr>
-      <tr>
-        <td>#2</td>
-        <td></a></td>
-        <td></td>
-        <td></td>
-        <td>Javascript</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td>#3</td>
-        <td> </a></td>
-        <td></td>
-        <td></td>
-        <td>Javascript</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>#4</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>Javascript</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>#5</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>Javascript</td>
-        <td></td>
-      </tr>
-      <tr class="is-selected">
-        <td></td>
-        <td>I have spend  hrs in javascript, hrs in html & bulma htm</td>
-        <td>Total= hrs</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
+  
 <!-- 08-02-2023 progarm below -->
     <table class="table is-fullwidth">
-      <h1 class="title is-size-5">Date :- 08/02/2023</h1>
+      <h1 class="title is-size-5">Date :- 09/02/2023</h1>
       <tr>
         <th>Number</th>
         <th>Task</th>
@@ -262,6 +208,7 @@
 
   </div>
   </div>
+  
 </body>
 
 </html>

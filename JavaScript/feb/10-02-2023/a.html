@@ -1,0 +1,29 @@
+</div>
+<p id="starline"></p>
+<!-- 
+<table class="table is-bordered">
+    <tbody>
+        <tr>
+            <td>*</td>
+        </tr>
+    </tbody>
+</table> -->
+
+<!-- Now We Can Writr JavaScript Code -->
+
+<script>
+    function star() {
+        var a = parseInt(document.getElementById("first").value);
+        var strDiv = '<table class="table is-bordered"> <tr>';
+        for (i = 1; i <= a; i++)
+         {         
+            for (j = 0; j < i; j++) 
+            {
+                strDiv = strDiv +  "<td>" + "*" + "</td>" ;    
+            }
+            strDiv = strDiv + "</tr>";
+        }
+        
+        document.getElementById("starline").innerHTML = strDiv;
+    }
+</script>
