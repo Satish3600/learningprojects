@@ -20,17 +20,18 @@
         <script>
             function star() {
                 let a = Number(document.getElementById("first").value);
-                let b = "";
                 var strDiv = '<table class="table is-bordered"> <tr>';
                 
 
                 for (i = 1; i <= a; i++) {
+                    strDiv = strDiv  + "<td>" + 1+"</td>";
                     for (k = 1; k <= (a - i); k++) {
-                        //b = b + "&nbsp";
-                       // strDiv = strDiv  + "&nbsp";
+                       // b = b + "&nbsp";
+                       strDiv = strDiv  + "<td>" +  +"</td>";
                     }
                     for (j = 1; j <= i; j++) {
-                        strDiv = strDiv +  "<td>"  + "</td>" ;
+                        strDiv = strDiv +  "<td>"  +"*"+ "</td>" ;
+                        //b = b + "+" ;
                     }
                    // b = b + "<br/>";
                    strDiv = strDiv + "</tr>";
