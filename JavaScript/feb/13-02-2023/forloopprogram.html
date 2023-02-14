@@ -13,7 +13,8 @@
     <div class="container p-5">
         <input type="text" id="first" class="input is-large" value="1" placeholder="Enter The First Value">
         <input type="text" id="second" class="input is-large" value="10" placeholder="Enter The Second Value">
-        <input type="text" id="third" class="input is-large" value = "0"  placeholder="Enter The Value For Get Divided Answer">
+        <input type="text" id="third" class="input is-large" value="0"
+            placeholder="Enter The Value For Get Divided Answer">
     </div>
     <div class="column has-text-centered">
         <button onclick="calculate()" class="button is-info"> Calculate</button>
@@ -33,28 +34,26 @@
             var c = Number(document.getElementById("third").value);
             var sum = 0;
             var stringsum = "";
-            for (i = a; i <= b; i++) {
-                if (c ==0){
-                    sum = sum + i;
-                stringsum = stringsum + i + "+" ;
-                }
-                
-                
-
-
-                if (i%c == 0){
-                sum = sum + i;
-                stringsum = stringsum + i + "+"  ;
+            if(c==0){
+                c =1;
             }
+            for (i = a; i <= b; i++) {
+          
+                if (  i % c == 0 ) {
+                    sum = sum + i;
+                    stringsum = stringsum + i + "+";
+                }
+                if(i==b){
+                    stringsum = stringsum + (i-b);
+                }
             }
             document.getElementById("answer1").innerHTML = sum;
-             document.getElementById("answer2").innerHTML = stringsum;
+            document.getElementById("answer2").innerHTML = stringsum + " = " + sum;
 
             //  for (i = a; i <= b; i++) {
-    
+
             //     sum = sum + i;
             //     stringsum = stringsum + i ;
-            
             // }
             // document.getElementById("answer1").innerHTML = sum;
             //  document.getElementById("answer2").innerHTML = stringsum;

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Cd Calculator</title>
+</head>
+
+<body>
+    <div class="container p-5">
+        <div class="columns">
+            <div class="column">
+                <div>
+                    <h6 class="title is-size-3 has-text-link"> <b> CD Calculator </b></p>
+                    </h6>
+                </div>
+                <div class="card">
+                    <div class="card-Header">
+                    </div>
+                    <div class="card-content">
+                        Initial Deposit: <input type="text" id="firstvalue" value="1000"><br>
+                        Interest Rate: <input type="text" id="secondvalue" value="5">
+                        <div class="column has-text-centered">
+                            <button onclick="calculate()" class="button is-success">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-Header">
+                        <h6 class="title is-size-3 has-text-white  has-background-success"> <b> Rsults </b></p>
+                        </h6>
+                    </div>
+                    <div class="card-content">
+                        End Balance: <input type="text" id="endbalance"><br>
+                        Total Pincipal: <input type="text" id="principal"><br>
+                        Total interest: <input type="text" id="interest1">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Use For Third Column -->
+            <div class="column"></div>
+            <!-- End use for third column -->
+        </div>
+        <!-- <div>
+            <table id="finTable"></table>
+        </div> -->
+        <div class="table-container">
+            <table class="table is-bordered">
+                <thead></thead>
+                <tbody id="finTable"></tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <script>
+        function calculate() {
+            var firstvalue = Number(document.getElementById("firstvalue").value);
+            first = firstvalue;
+            var secondvalue = Number(document.getElementById("secondvalue").value);
+            second = secondvalue;
+            rate = first * second / 100;
+            sum = rate + first;
+            document.getElementById("principal").value = first;
+            document.getElementById("interest1").value = rate;
+            document.getElementById("endbalance").value = sum;
+            drawTable();
+        }
+        function drawTable() {
+            let finTableStr = "<tr> <td></td><td><b>start principal</b></td><td><b>start balance</b></td><td><b>interest</b></td><td><b>tax</b></td><td><b>end balance</b></td><td><b>end principal</b></td></tr>";
+            var start = first;
+            var interesttable = start * second / 100 /12;
+            var sum1 = interesttable + start;
+            for (i = 1; i <= 12; i++) {
+                multitbl = "";
+                if(i==1){
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + start + "</td>" + "<td id='temp'>" + interesttable  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum1 + "</td>" + "<td>" + first + "</td>";
+            }
+            if(i==2){
+                     second2 = sum1;
+                     interesttable2 = second2 * second / 100 /12;
+                     sum2 = interesttable2 + second2;
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second2 + "</td>" + "<td id='temp'>" + interesttable2  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum2 + "</td>" + "<td>" + first + "</td>";
+            }
+            if(i==3){
+                second3 = sum2;
+                     interesttable3 = second3 * second / 100 /12;
+                     sum3 = interesttable3 + second3;
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second3 + "</td>" + "<td id='temp'>" + interesttable3  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum3 + "</td>" + "<td>" + first + "</td>";
+            }
+            if(i==4){
+                second4 = sum3;
+                     interesttable4 = second4 * second / 100 /12;
+                     sum4 = interesttable4 + second4;
+
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second4 + "</td>" + "<td id='temp'>" + interesttable4  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum4 + "</td>" + "<td>" + first + "</td>";
+            }
+             if(i==5){
+                second5 = sum4;
+                     interesttable5 = second5 * second / 100 /12;
+                     sum5 = interesttable5 + second5;
+
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second5 + "</td>" + "<td id='temp'>" + interesttable5  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum5 + "</td>" + "<td>" + first + "</td>";
+            }
+            if(i==6){
+                second6 = sum5;
+                     interesttable6 = second6 * second / 100 /12;
+                     sum6 = interesttable6 + second6;
+
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second6 + "</td>" + "<td id='temp'>" + interesttable6  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum6 + "</td>" + "<td>" + first + "</td>";
+            }
+            if(i==7){
+                second7 = sum6;
+                     interesttable7 = second7 * second / 100 /12;
+                     sum7 = interesttable7 + second7;
+
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second7 + "</td>" + "<td id='temp'>" + interesttable7  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum7 + "</td>" + "<td>" + first + "</td>";
+            }
+            if(i==8){
+                second8 = sum7;
+                     interesttable8 = second8 * second / 100 /12;
+                     sum8 = interesttable8 + second8;
+
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second8 + "</td>" + "<td id='temp'>" + interesttable8  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum8 + "</td>" + "<td>" + first + "</td>";
+            }
+            if(i==9){
+                second9 = sum8;
+                     interesttable9 = second9 * second / 100 /12;
+                     sum9 = interesttable9 + second9;
+
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second9 + "</td>" + "<td id='temp'>" + interesttable9  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum9 + "</td>" + "<td>" + first + "</td>";
+            } 
+            if(i==10){
+                second10 = sum9;
+                     interesttable10 = second10 * second / 100 /12;
+                     sum10 = interesttable10 + second10;
+
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second10 + "</td>" + "<td id='temp'>" + interesttable10  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum10 + "</td>" + "<td>" + first + "</td>";
+            }
+            if(i==11){
+                second11 = sum10;
+                     interesttable11 = second11 * second / 100 /12;
+                     sum11 = interesttable11 + second11;
+
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second11 + "</td>" + "<td id='temp'>" + interesttable11  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum11 + "</td>" + "<td>" + first + "</td>";
+            }
+            if(i==12){
+                second12 = sum11;
+                     interesttable12 = second12 * second / 100 /12;
+                     sum12 = interesttable12 + second12;
+
+                multitbl = multitbl + "<td>" + i + "</td>" + "<td>" + first + "</td>" + "<td>" + second12 + "</td>" + "<td id='temp'>" + interesttable12  + "</td>" + "<td>" + "0.00" + "</td>" + "<td>" + sum12 + "</td>" + "<td>" + first + "</td>";
+            }
+                for (j = 1; j <= 7; j++) {
+                }
+                finTableStr = finTableStr + "<tr>" + multitbl + "</tr>";
+            }
+            document.getElementById("finTable").innerHTML = finTableStr;
+        }
+    </script>
+</body>
+
+</html>

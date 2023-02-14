@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsde<title>Document</title>
-    livr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
     <div class="container p-5">
@@ -31,49 +31,64 @@ function DSE() {
             var c = Number(document.getElementById("third").value);
             var d = Number(document.getElementById("fourth").value);
             // below condition is used for  input 1st box
-            if (a > b && a > c) {
+           
+            if (a > b && a > c && a>d) {
                 document.getElementById("answer1").value = a;
             }
-            if (b > a && b > c) {
+                // if(a>d){
+                //     document.getElementById("answer1").value = a;
+                // }
+            if (b > a && b > c && c>d) {
                 document.getElementById("answer1").value = b;
             }
-            if (c > a && c > b) {
+            // if(b>d){
+            //     document.getElementById("answer1").value = b;
+            // }
+            if (c > a && c > d && ) {
                 document.getElementById("answer1").value = c;
             }
-
-
+            if (c > b) {
+                document.getElementById("answer1").value = c;
+            }
+          
+            if (d > a && d > b) {
+                document.getElementById("answer1").value = d;
+            }
+            if (d > c) {
+                document.getElementById("answer1").value = d;
+            }
 
             // below condition is used for  input 2nd box
-            if (a < b && a < c) {
-                document.getElementById("answer2").value = a;
-            }
-            if (b < a && b < c) {
-                document.getElementById("answer2").value = b;
-            }
-            if (c < a && c < b) {
-                document.getElementById("answer2").value = c;
-            }
+        //     if (a < b && a < c) {
+        //         document.getElementById("answer2").value = a;
+        //     }
+        //     if (b < a && b < c) {
+        //         document.getElementById("answer2").value = b;
+        //     }
+        //     if (c < a && c < b) {
+        //         document.getElementById("answer2").value = c;
+        //     }
 
 
 
 
-        }
+        // }
 
-        function ASE() {
-            var a = Number(document.getElementById("first").value);
-            var b = Number(document.getElementById("second").value);
-            var c = Number(document.getElementById("third").value);
-            var c = Number(document.getElementById("fourth").value);
-            // below condition is used for  input 1 box
-            if (a < b && a < c) {
-                document.getElementById("answer1").value = a;
-            }
-            if (b < a && b < c) {
-                document.getElementById("answer1").value = b;
-            }
-            if (c < a && c < b) {
-                document.getElementById("answer1").value = c;
-            }
+        // function ASE() {
+        //     var a = Number(document.getElementById("first").value);
+        //     var b = Number(document.getElementById("second").value);
+        //     var c = Number(document.getElementById("third").value);
+        //     var c = Number(document.getElementById("fourth").value);
+        //     // below condition is used for  input 1 box
+        //     if (a < b && a < c) {
+        //         document.getElementById("answer1").value = a;
+        //     }
+        //     if (b < a && b < c) {
+        //         document.getElementById("answer1").value = b;
+        //     }
+        //     if (c < a && c < b) {
+        //         document.getElementById("answer1").value = c;
+        //     }
            
             
 
@@ -88,15 +103,15 @@ function DSE() {
 
 
             // below condition is used for  input 2nd box
-            if (a > b && a > c) {
-                document.getElementById("answer2").value = a;
-            }
-            if (b > a && b > c) {
-                document.getElementById("answer2").value = b;
-            }
-            if (c > a && c > b) {
-                document.getElementById("answer2").value = c;
-            }
+            // if (a > b && a > c) {
+            //     document.getElementById("answer2").value = a;
+            // }
+            // if (b > a && b > c) {
+            //     document.getElementById("answer2").value = b;
+            // }
+            // if (c > a && c > b) {
+            //     document.getElementById("answer2").value = c;
+            // }
             
             
             // if (c>d && x>a){
