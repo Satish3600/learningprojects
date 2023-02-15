@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+</head>
+
+<body>
+    <div class="container p-5">
+        Enter X Value: <input type="text" id="first" value="5" class="input is-large" placeholder="Enter X Value">
+        Enter Y Value: <input type="text" id="second" value="10" class="input is-large" placeholder="Enter X Value">
+        <div class="column has-text-centered">
+            <button onclick="calculate()" class="button is-info">Calculate</button>
+        </div>
+        Please Check First Task Result:<input type="text" id="answer1" class="input is-large"
+            placeholder="Please Check First Task Result">
+        Please Check Second Task Result:<input type="text" id="answer2" class="input is-large"
+            placeholder="Please Check Second Task Result">
+        Please Check Third Task Result: <input type="text" id="answer3" class="input is-large"
+            placeholder="Please Check Third Task Result">
+    </div>
+
+<script>
+    function calculate(){
+       var a = Number(document.getElementById("first").value);
+       var b = Number(document.getElementById("second").value);
+        var c = a + b;
+        var d = (2*a)  +  (2*b);
+        
+
+        document.getElementById("answer1").value = "Ans:  "  + c + "  (X + Y)"; 
+        document.getElementById("answer2").value = "Ans:  "  + d + "  (2X + 2Y)"; 
+    }
+    
+    </script>
+
+</body>
+
+</html>

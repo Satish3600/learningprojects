@@ -5,25 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
-    <div class="containr p-5">
-        <h1 class="title has-text-centered">Draw Table</h1>
-        <div class="box column is-half is-offset-one-quarter">
-            <div>
-                <input type="text" class="input" id="first" value="5">
-                <input type="text" class="input" id="second" value="3">
-            </div>
-            <div class="button mt-2">
-<button>
-    
-</button>
-            </div>
+    <div class="container p-5">
+        <div class="column has-text-centered">
+            <button onclick="toggle()" class="button is-info" id="first">Toggle</button>
+           
         </div>
     </div>
+    <script>
+
+        // function toggle() {
+
+        //   var a = document.getElementById("first");
+        //     if (a.className == "button is-info" ) {
+        //         a.className = "button is-danger";
+        //     }
+        //     else { 
+        //        a.className = "button is-info";
+        //     }
+        // }
+        function toggle() {
+            var status = false;
+            if(status == true){
+            true == false;
+            
+        }
+        else{
+            false == true;
+
+        }
+        }
+    </script>
+
 </body>
 
 </html>
