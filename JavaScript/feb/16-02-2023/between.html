@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <div class="container p-5">
+        <input type="text" id="first" class="input is-medium" value="5"> 
+        <input type="text" id="second" class="input is-medium" value="10"> 
+        <div class="column has-text-centered">
+            <button onclick="satish()" class="button is-info is-small">
+                Click
+            </button>
+        </div>
+<input type="text" id="answer1" class="input is-medium">
+<input type="text" id="answer2" class="input is-medium">
+    </div>
+
+    <script>
+        function satish(){
+                var a = Number(document.getElementById("first").value);
+                var b = Number(document.getElementById("second").value);
+                var total = 0;
+                var strings = "";
+                for(i=a; i<=b; i++){
+                    total = total + i;
+                    if(b!=i){
+                    strings = strings + i + "+";
+                    }
+                    else {
+                        strings = strings + i;
+                    }
+
+                }
+                document.getElementById("answer1").value=total;
+                document.getElementById("answer2").value=strings;
+
+        }
+    </script>
+</body>
+</html>

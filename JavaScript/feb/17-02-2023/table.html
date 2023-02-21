@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container p-5">
+        <input type="text" id="first" class="input is-large" value="5">
+        <div class="column has-text-centered">
+            <button onclick="tap()" class="button is-info">
+                Click
+            </button>
+        </div>
+        <p id="vivek"></p>
+    </div>
+    <script>
+        function tap() {
+            var a = Number(document.getElementById("first").value);
+            // var stringss = "<table class ='is-bordered'> <tr> <th>Number </th></tr>";
+            var stringss = '<table class="table is-fullwidth is-bordered"><tr><th>Number</th><tr>';
+            for (i = 1; i <= a; i++) {
+                stringss = stringss + "<tr><td>" + i + "</tr ></td>";
+            }
+            document.getElementById("vivek").innerHTML = stringss;
+        }
+    </script>
+
+
+</body>
+
+</html>

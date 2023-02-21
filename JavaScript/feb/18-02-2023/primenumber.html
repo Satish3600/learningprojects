@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <script>
+        var number = prompt("Please enter a number");
+        if (number == 1) {
+            console.log(`${number} is neither prime or nor composite`);
+        }
+        else if (number < 1) {
+            console.log(`${number} is not a prime number`)
+        }
+        else {
+            for (i = 2; i < number; i++) {
+                //15%2 = R:1
+                //15/2 =7 R=1
+                if (number % i == 0) {
+                    var result = `${number} is not a primw nuumnber`;
+                    break;
+                }
+                else {
+                    var result = `${number} is a primw nuumnber`;
+                }
+            }
+            console.log(result)
+        }
+    </script>
+</body>
+
+</html>

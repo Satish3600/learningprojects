@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Percentage Yield(%)</title>
+</head>
+
+<body>
+    <div class="container p-5">
+        <div class="columns">
+            <div class="column">
+                <div>
+                    <h6 class="title is-size-3 has-text-link"> <b> Percentage Yield(%) </b></p>
+                    </h6>
+                </div>
+                <div class="card">
+                    <div class="card-Header">
+                    </div>
+                    <div class="card-content">
+                        Actual Yield <input type="text" id="first"><br>
+                        Theoritical Yield: <input type="text" id="second">
+                        <div class="column has-text-centered">
+                            <button onclick="calculate()" class="button is-success">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-Header">
+                        <h6 class="title is-size-3 has-text-white  has-background-success"> <b> Rsults </b></p>
+                        </h6>
+                    </div>
+                    <div class="card-content">
+                        % Yield: <input type="text" id="answer1"><br>
+                    </div>
+                </div>
+            </div>
+            <!-- Use For Third Column -->
+            <div class="column"></div>
+            <!-- End use for third column -->
+        </div>
+        <!-- <div>
+            <table id="finTable"></table>
+        </div> -->
+    </div>
+<script>
+
+
+function calculate () {
+            var a = Number(document.getElementById("first").value);
+            var b = Number(document.getElementById("second").value);
+            var c = (a/b) * 100;
+            document.getElementById("answer1").value=c;
+}
+</script>
+
+
+
+</body>
+
+</html>

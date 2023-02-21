@@ -199,10 +199,12 @@
     {
         "name": "Oracle",
         "image": "oracle.png"
+         //same as a barbara gorden image
     },
     {
-        "name": "Batwoman",
-        "image": "batwoman.png"
+        // "name": "Batwoman",
+        // "image": "batwoman.png"
+        // https://www.indiewire.com/2018/10/batwoman-first-look-ruby-rose-cw-dc-crossover-1202010623/
     },
     {
         "name": "Man-Bat",
@@ -223,6 +225,7 @@
     {
         "name": "Barbara Gordon",
         "image": "barbara-gordon.png"
+        //same as a oracle image
     },
     {
         "name": "Supergirl",
