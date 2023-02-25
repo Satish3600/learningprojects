@@ -21,43 +21,23 @@
 
 
     <script>
-        //var j= 0;
-        var arraycreate = [ ],j;
+        var arraycreate = [];
+        var firstinvalue = Number(document.getElementById("firstvalue").value);
+        var stringTable = '<table class="table is-bordered"><tr><th>Index Value</th><th>Array Value</th></tr>';
         function arrayprint() {
-            var first = Number(document.getElementById("firstvalue").value);
-            var stringTable = '<table class="table is-bordered"><tr><th>Index Value</th><th>Array Value</th></tr>'
-            for (var i = 0; i < first; i++) {
-                //var j = Math.random();
-                arraycreate [i] =  Math.floor(Math.random() * 100);
-  
+            for ( i = 0; i < firstinvalue; i++) {
+                arraycreate[i] = Math.floor(Math.random() * 100);
             }
-
-            
-
-
-
-
-            document.getElementById("printTable").innerHTML = stringTable;
+            arraycreate2()
         }
-        arrayprint()
+        function arraycreate2() {
+            for (i = 0; i < firstinvalue; i++) {
+                stringTable = stringTable + "<tr><td>" + i + "</td>" + "<td>" + arraycreate [i] + "</td></tr>";
+            }
+            document.getElementById("printTable").innerHTML = stringTable;
+            
+        }
     </script>
 </body>
 
 </html>
-<!-- // program to get a random item from an array
-
-function getRandomItem(arr) {
-
-    // get random index value
-    const randomIndex = Math.floor(Math.random() * arr.length);
-
-    // get random item
-    const item = arr[randomIndex];
-
-    return item;
-}
-
-const array = [1, 'hello', 5, 8];
-
-const result = getRandomItem(array);
-console.log(result); -->
