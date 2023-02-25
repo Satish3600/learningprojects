@@ -21,15 +21,14 @@
 
 
     <script>
+        var arraycreate = [10,20,30,40,50,60,70,80,90,100];
         function arrayprint() {
             var first = Number(document.getElementById("firstvalue").value);
-            
-            var stringTable = '<table class="table is-bordered"><tr><td>Index Value</td><td>Array Value</td></tr>'
+            var stringTable = '<table class="table is-bordered"><tr><th>Index Value</th><th>Array Value</th></tr>'
             for (var i = 0; i < first; i++) {
-                for(j=0; j< Math.floor(Math.random() * 2000); j++){
-
+                for(j=arraycreate; j<arraycreate.length; j++){
                 }
-                stringTable = stringTable + "<td>" + i + "</td>" + "<td>" + j + "</td></tr>" ;
+                stringTable = stringTable + "<tr><td>" + i + "</td>" + "<td>" + Math.floor(Math.random() * arraycreate.length); + "</td></tr>" ;
             }
             document.getElementById("printTable").innerHTML = stringTable;
         }
@@ -38,5 +37,20 @@
 </body>
 
 </html>
+<!-- // program to get a random item from an array
 
+function getRandomItem(arr) {
+
+    // get random index value
+    const randomIndex = Math.floor(Math.random() * arr.length);
+
+    // get random item
+    const item = arr[randomIndex];
+
+    return item;
 }
+
+const array = [1, 'hello', 5, 8];
+
+const result = getRandomItem(array);
+console.log(result); -->
