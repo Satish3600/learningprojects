@@ -12,7 +12,7 @@
 
 <body>
     <div class="container p-5">
-        <input type="text" id="userEnteredValue" class="input is-large" placeholder="Entrer The Value" value="">
+        <input type="text" id="userEnteredValue" class="input is-large" placeholder="Entrer The Value" value="0">
         <div class="column has-text-centered">
             <button onclick="addInArray()" class="button is-info">Adding Array</button>
         </div>
@@ -26,9 +26,9 @@
         function addInArray(){
                 let userEnteredValue = Number(document.getElementById("userEnteredValue").value); 
                 createArray [i] = userEnteredValue;
-                i++;
-                console.log(i )
-                console.log(createArray [i] )
+                i = i+1;    
+              
+                
                  genrateTable()
         }
         function genrateTable(){
@@ -36,6 +36,8 @@
                     for(i=0; i<createArray.length; i++){
                     stringTable = stringTable + "<tr><td>" + i + "</td>" + "<td>" + createArray[i] + "</td></tr>"; 
                     document.getElementById("printTable").innerHTML = stringTable;
+                    // console.log("This is a i value:>" + i  +"      This is  that value  "+ createArray [i]  )
+                    // console.log(createArray [i] )
                 }
         }
     </script>
