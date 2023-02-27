@@ -25,13 +25,13 @@
         var firstinvalue = Number(document.getElementById("firstvalue").value);
         var stringTable = '<table class="table is-bordered"><tr><th>Index Value</th><th>Array Value</th></tr>';
         function arrayprint() {
-            for ( i = 0; i < firstinvalue; i++) {
+            for (let i = 0; i < firstinvalue; i++) {
                 arraycreate[i] = Math.floor(Math.random() * 100);
             }
             arraycreate2()
         }
         function arraycreate2() {
-            for (i = 0; i < firstinvalue; i++) {
+            for (let i = 0; i < firstinvalue; i++) {
                 stringTable = stringTable + "<tr><td>" + i + "</td>" + "<td>" + arraycreate [i] + "</td></tr>";
             }
             document.getElementById("printTable").innerHTML = stringTable;

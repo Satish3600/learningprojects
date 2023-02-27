@@ -22,14 +22,21 @@
         var arrayCreate = [];
         function create_Array_random_value() {
             let stringTable = '<table class="table is-bordered"><tr><th>Index Value</th><th>Array Value</th></tr>';
-            for (let i = 0; i < 10; i++) {
-                arrayCreate[i] = Math.floor(Math.random() * 100);
-                stringTable = stringTable + "<tr><td>" + i + "</td>" + "<td>" + arrayCreate[i] + "</td></tr>";
-                console.log(arrayCreate[i])
-            }
+            let counter =0;
+            for (let i = 0; ; i++) {
+                  arrayCreate[counter] = Math.floor(Math.random() * 100);
+                    stringTable = stringTable + "<tr><td>" + counter + "</td>" + "<td>" + arrayCreate[counter] + "</td></tr>";
+                    counter =counter + 1;
+                    console.log(counter);
+                
+                    if(counter==10){
+                        break;
+                    }
+                }
             document.getElementById("print_random-Array").innerHTML = stringTable;
         }
-       
+        create_Array_random_value();
+    
 
 
         function sum_of_Array() {
@@ -40,8 +47,8 @@
                 sum_String = sum_String + arrayCreate[i];
                 sum_display_value = sum_display_value + arrayCreate[i] + "+";
             }
-            document.getElementById("print_stringsum_ofArray").innerHTML= "Total Array Value Sum is >  " + sum_String ;
-            document.getElementById("print_sum_ofArray").innerHTML=sum_display_value ;
+          //  document.getElementById("print_stringsum_ofArray").innerHTML= "Total Array Value Sum is >  " + sum_String ;
+            //  document.getElementById("print_sum_ofArray").innerHTML=sum_display_value ;
         }
         
     </script>

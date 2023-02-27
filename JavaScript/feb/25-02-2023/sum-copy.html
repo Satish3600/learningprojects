@@ -25,25 +25,19 @@
             for (let i = 0; i < 10; i++) {
                 arrayCreate[i] = Math.floor(Math.random() * 100);
                 stringTable = stringTable + "<tr><td>" + i + "</td>" + "<td>" + arrayCreate[i] + "</td></tr>";
-                console.log(arrayCreate[i])
+                // console.log(arrayCreate[i])
             }
             document.getElementById("print_random-Array").innerHTML = stringTable;
+         
         }
-       
+        create_Array_random_value();
 
 
         function sum_of_Array() {
-            create_Array_random_value();
-            let sum_String = 0;
-            let sum_display_value = "";
-            for (let i = 0; i < arrayCreate.length; i++) {
-                sum_String = sum_String + arrayCreate[i];
-                sum_display_value = sum_display_value + arrayCreate[i] + "+";
-            }
-            document.getElementById("print_stringsum_ofArray").innerHTML= "Total Array Value Sum is >  " + sum_String ;
-            document.getElementById("print_sum_ofArray").innerHTML=sum_display_value ;
+                    
+
         }
-        
+
     </script>
 </body>
 
