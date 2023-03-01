@@ -32,34 +32,38 @@
 
     <script>
 
-        var userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
-        var userEnteredFourthValue = Number(document.getElementById("userEnteredFourthValue").value);
+        var userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
 
+        var secondInputSum1, userEnteredSecondValue;
         function secondInputSum() {
-            let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
-            let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
-            let secondInputSum = userEnteredFirstValue + userEnteredSecondValue ;
-            document.getElementById("userEnteredSecondValue").value = secondInputSum;   
-            document.getElementById("sumAnswer").value = secondInputSum + userEnteredFirstValue;   
+        //    // let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
+        //      userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
+        //      secondInputSum1 = userEnteredFirstValue + userEnteredSecondValue;
+        //     console.log("Firts value   " + userEnteredFirstValue + "   second value  :" + userEnteredSecondValue)
+            alert(userEnteredFirstValue)
+        //     console.log(secondInputSum1)
+        //     document.getElementById("userEnteredSecondValue").value = secondInputSum1;
+        //     let sum1 = secondInputSum1 + userEnteredFirstValue;
+        //     document.getElementById("sumAnswer").value = sum1;
         }
-        function thirdInputSum(){
-            let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
-            let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
-            let userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
-            let thirdInputSum = userEnteredSecondValue + userEnteredThirdValue;
-            document.getElementById("userEnteredThirdValue").value = thirdInputSum;
-            document.getElementById("sumAnswer").value = userEnteredFirstValue + userEnteredSecondValue + thirdInputSum ;
-        }
-        function fourthInputSum(){
-            let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
-            let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
-            let userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
-            let userEnteredFourthValue = Number(document.getElementById("userEnteredFourthValue").value);
-            let fourthInputSum = userEnteredThirdValue + userEnteredFourthValue;
-            document.getElementById("userEnteredFourthValue").value = fourthInputSum;
-            document.getElementById("sumAnswer").value = userEnteredFirstValue + userEnteredSecondValue + userEnteredThirdValue  + fourthInputSum ;
+        // function thirdInputSum() {
+        //     //let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
+        //     let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
+        //     let userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
+        //     let thirdInputSum = userEnteredSecondValue + userEnteredThirdValue;
+        //     document.getElementById("userEnteredThirdValue").value = thirdInputSum;
+        //     document.getElementById("sumAnswer").value = userEnteredFirstValue + userEnteredSecondValue + thirdInputSum;
+        // }
+        // function fourthInputSum() {
+        //    // let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
+        //     let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
+        //     let userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
+        //     let userEnteredFourthValue = Number(document.getElementById("userEnteredFourthValue").value);
+        //     let fourthInputSum = userEnteredThirdValue + userEnteredFourthValue;
+        //     document.getElementById("userEnteredFourthValue").value = fourthInputSum;
+        //     document.getElementById("sumAnswer").value = userEnteredFirstValue + userEnteredSecondValue + userEnteredThirdValue + fourthInputSum;
 
-        }
+        // }
 
     </script>
 

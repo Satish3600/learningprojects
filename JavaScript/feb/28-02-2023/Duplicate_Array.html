@@ -25,14 +25,16 @@
                 let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
                 flag = false;
                 for(index=0; index<createArray.length; index++){
-                    createArray[index] = userEnteredFirstValue;
                     if( createArray[index] == userEnteredFirstValue){
-                        
-                    }
-
+                        alert("Duplicate Value")
+                        flag = true;
+                    } 
                 }
-                index = index + 1;
+                if(flag != true){
+                    createArray[index] = userEnteredFirstValue;
 
+                    index = index + 1;
+                }
                 genrateTable();
             }
         function genrateTable(){
