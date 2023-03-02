@@ -17,10 +17,10 @@
         Minus <input type="text" id="userEnteredThirdValue" value="1">
         <div class="column has-text-centered">
             <button onclick="drawTable()" class="button is-danger is-small">AddTable1</button><br><br>
-            <button onclick="leftButton()" class="button is-info is-small">left</button>
-            <button onclick="rightButton()" class="button is-info is-small">right</button>
-            <button onclick="upButton()" class="button is-info is-small">up</button>
-            <button onclick="downButton()" class="button is-info is-small">down</button>
+            <button id="buttonLeft" onclick="leftButton()" class="button is-info is-small">left</button>
+            <button id="buttonRight" onclick="rightButton()" class="button is-info is-small">right</button>
+            <button id="buttonUp" onclick="upButton()" class="button is-info is-small">up</button>
+            <button id="buttonDown" onclick="downButton()" class="button is-info is-small">down</button>
         </div>
         <!-- <div class="container table-container">
             <table class="table is-bordered">
@@ -54,8 +54,11 @@
         }
         function leftButton() {
             let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
+            let buttonLeftVar = document.getElementById("buttonLeft");
+            let buttonUpVar = document.getElementById("buttonUp")
             if (tempj == 1) {
-                alert("jhjh")
+                buttonLeftVar.className = "button is-loading is-small is-info"
+                buttonUpVar.className = "button is-loading is-small is-info"
             }
             else {
                 tempj = tempj - 1;
@@ -64,8 +67,11 @@
         }
         function rightButton() {
             let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
+            let buttonRightVar = document.getElementById("buttonRight");
+            let buttonDownVar = document.getElementById("buttonDown");
             if (tempj == userEnteredSecondValue) {
-                alert("fdhjbjh")
+                buttonRightVar.className = "button is-loading is-small is-info"
+                buttonDownVar.className = "button is-loading is-small is-info"
             }
             else {
                 tempj = tempj + 1;
@@ -73,21 +79,27 @@
             drawTable()
         }
         function upButton() {
+            let buttonLeftVar = document.getElementById("buttonLeft");
+            let buttonUpVar = document.getElementById("buttonUp");
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
-            if(tempi==1){
-alert("dfjhgbjhf")
+            if (tempi == 1) {
+                buttonLeftVar.className = "button is-loading is-small is-info"
+                buttonUpVar.className = "button is-loading is-small is-info"
             }
-            else{
-                tempi = tempi -  1;
+            else {
+                tempi = tempi - 1;
             }
             drawTable()
         }
         function downButton() {
+            let buttonLeftVar = document.getElementById("buttonLeft");
+            let buttonDownVar = document.getElementById("buttonDown");
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
-            if(tempi ==userEnteredFirstValue ){
-alert("jhdgjh")
+            if (tempi == userEnteredFirstValue) {
+                buttonLeftVar.className = "button is-loading is-small is-info"
+                buttonDownVar.className = "button is-loading is-small is-info"
             }
-            else{
+            else {
                 tempi = tempi + 1;
             }
             drawTable()
@@ -96,11 +108,3 @@ alert("jhdgjh")
 </body>
 
 </html>
-<!-- function satish1() {
-    tracker =  tracker - Number(document.getElementById("second").value);;
-satish();
-}
-function satish2() {
-    tracker =  tracker  + Number(document.getElementById("second").value);;
-    satish();
-} -->
