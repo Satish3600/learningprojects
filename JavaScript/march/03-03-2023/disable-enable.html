@@ -14,13 +14,13 @@
     <div class="container p-5">
         Rows <input type="text" id="userEnteredFirstValue" value="4"> <br>
         Columns <input type="text" id="userEnteredSecondValue" value="4"> <br>
-        Minus <input type="text" id="userEnteredThirdValue" value="1">
+        Minus <input type="text" id="userEnteredThirdValue">
         <div class="column has-text-centered">
-            <button onclick="drawTable()" class="button is-danger is-small">AddTable1</button><br><br>
-            <button onclick="leftButton()" class="button is-info is-small">left</button>
-            <button onclick="rightButton()" class="button is-info is-small">right</button>
-            <button onclick="upButton()" class="button is-info is-small">up</button>
-            <button onclick="downButton()" class="button is-info is-small">down</button>
+            <button onclick="firstTimeDraw()" class="button is-danger is-small">AddTable1</button><br><br>
+            <button id="buttonLeft" onclick="leftButton()" class="button is-info is-small">left</button>
+            <button id="buttonRight" onclick="rightButton()" class="button is-info is-small">right</button>
+            <button id="buttonUp" onclick="upButton()" class="button is-info is-small">up</button>
+            <button id="buttonDown" onclick="downButton()" class="button is-info is-small">down</button>
         </div>
         <!-- <div class="container table-container">
             <table class="table is-bordered">
@@ -34,10 +34,21 @@
         // tracker =0;
         tempi = 1;
         tempj = 1;
+        flag = false;
+        function firstTimeDraw() {
+            flag = false;
+            drawTable()
+        }
         function drawTable() {
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
             let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
-            let userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
+            if (flag == false) {
+                userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
+                tempi = userEnteredThirdValue;
+                tempj = userEnteredThirdValue;
+                flag = true;
+            }
+
             let stringTable = ' <table class="table is-bordered"><tr>';
             for (let i = 1; i <= userEnteredFirstValue; i++) {
                 for (let j = 1; j <= userEnteredSecondValue; j++) {
@@ -54,9 +65,12 @@
         }
         function leftButton() {
             let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
-            if (tempj == 1) {
-                alert("jhjh")
+            let buttonLeftVar = document.getElementById("buttonLeft");
+            let buttonUpVar = document.getElementById("buttonUp")
+            if (tempj == 1 ) {
+                document.getElementById("buttonLeft").disabled = true;
             }
+     
             else {
                 tempj = tempj - 1;
             }
@@ -64,8 +78,10 @@
         }
         function rightButton() {
             let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
-            if (tempj == userEnteredSecondValue) {
-                alert("fdhjbjh")
+            let buttonRightVar = document.getElementById("buttonRight");
+            let buttonDownVar = document.getElementById("buttonDown");
+            if (tempj == userEnteredSecondValue ) {
+                document.getElementById("buttonRight").disabled = true;
             }
             else {
                 tempj = tempj + 1;
@@ -73,21 +89,26 @@
             drawTable()
         }
         function upButton() {
+            let buttonLeftVar = document.getElementById("buttonLeft");
+            let buttonUpVar = document.getElementById("buttonUp");
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
-            if(tempi==1){
-alert("dfjhgbjhf")
+
+            if (tempi == 1) {
+                document.getElementById("buttonUp").disabled = true;
             }
-            else{
-                tempi = tempi -  1;
+            else {
+                tempi = tempi - 1;
             }
             drawTable()
         }
         function downButton() {
+            let buttonLeftVar = document.getElementById("buttonLeft");
+            let buttonDownVar = document.getElementById("buttonDown");
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
-            if(tempi ==userEnteredFirstValue ){
-alert("jhdgjh")
+            if (tempi == userEnteredFirstValue) {
+                document.getElementById("buttonDown").disabled = true;
             }
-            else{
+            else {
                 tempi = tempi + 1;
             }
             drawTable()
@@ -96,11 +117,3 @@ alert("jhdgjh")
 </body>
 
 </html>
-<!-- function satish1() {
-    tracker =  tracker - Number(document.getElementById("second").value);;
-satish();
-}
-function satish2() {
-    tracker =  tracker  + Number(document.getElementById("second").value);;
-    satish();
-} -->

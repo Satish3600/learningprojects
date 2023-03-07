@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <meta name="viewport" content="width=d    evice-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Star Game</title>
 </head>
 
@@ -89,16 +89,21 @@
     </div>
     </div>
     <script>
-        tempi = 1;
-        tempj = 1;
+        let tempi = 1;
+        let tempj = 1;
+        let randomi = getRandomNumberBeetween(1,16);
+        let randomj = getRandomNumberBeetween(1,16);
         function genrateTable() {
-            let a = Number(document.getElementById("userEnteredFirstValue").value);
-            let b = Number(document.getElementById("userEnteredSecondValue").value);
-            let c = Number(document.getElementById("userEnteredThirdValue").value);
+            let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
+            let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
+            let userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
             stringTable = '<table class="table is-bordered"><tr>';
-            for (let i = 1; i <= a; i++) {
-                for (let j = 1; j <= b; j++) {
+            for (let i = 1; i <= userEnteredFirstValue; i++) {
+                for (let j = 1; j <= userEnteredSecondValue; j++) {
                     if (i == tempi && j == tempj) {
+                        stringTable = stringTable + '<td>' + "G" + '</td>';
+                    }
+                    else if (i == randomi && j == randomj) {
                         stringTable = stringTable + '<td>' + "*" + '</td>';
                     }
                     else {
@@ -113,9 +118,10 @@
             if (tempj == 1) {
                 alert("Boundry Limit Over")
             }
-            else {
+             else {
 
-                tempj = tempj - 1;
+            tempj = tempj - 1;
+            
             }
             genrateTable()
         }
@@ -125,16 +131,19 @@
                 alert("Boundry Limit Over")
             }
             else {
-                tempj = tempj + 1;
-            }
+            tempj = tempj + 1;
+
+               }
             genrateTable()
         }
         function upButton() {
             if (tempi == 1) {
                 alert("Boundry Limit Over")
+           
             }
             else {
                 tempi = tempi - 1;
+                console.log(tempi)
             }
             genrateTable()
         }
@@ -142,28 +151,32 @@
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
             if (tempi == userEnteredFirstValue) {
                 alert("Boundry Limit Over")
+            
+
             }
-            else {
+           else {
                 tempi = tempi + 1;
-            }
+                console.log(tempi)
+           }
             genrateTable()
         }
         function leftUpperButton() {
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
-            if (userEnteredFirstValue => tempi) {
+            if (tempj == 1 || tempi == 1) {
                 alert("Boundry Limit Over")
             }
             else {
                 tempj = tempj - 1;
                 tempi = tempi - 1;
             }
+
             genrateTable()
         }
         function rightUpperButton() {
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
             let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
             let userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
-            if (userEnteredSecondValue <= tempi) {
+            if (tempi == 1 || tempj == userEnteredSecondValue) {
                 alert("Boundry Limit Over")
 
             }
@@ -179,8 +192,14 @@
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
             let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
             let userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
-            tempj = tempj - 1;
-            tempi = tempi + 1;
+            if (tempj == 1 || tempi == userEnteredFirstValue) {
+                alert("Boundry Limit Over")
+            }
+            else {
+                tempj = tempj - 1;
+                tempi = tempi + 1;
+            }
+
 
             genrateTable()
         }
@@ -188,10 +207,20 @@
             let userEnteredFirstValue = Number(document.getElementById("userEnteredFirstValue").value);
             let userEnteredSecondValue = Number(document.getElementById("userEnteredSecondValue").value);
             let userEnteredThirdValue = Number(document.getElementById("userEnteredThirdValue").value);
-            tempj = tempj + 1;
-            tempi = tempi + 1;
+            if (tempj == userEnteredSecondValue || tempi == userEnteredFirstValue) {
+                alert("Boundry Limit Over")
+            }
+            else {
+                tempj = tempj + 1;
+                tempi = tempi + 1;
+            }
+
 
             genrateTable()
+        }
+
+        function getRandomNumberBeetween(){
+            return 5;
         }
     </script>
 </body>
